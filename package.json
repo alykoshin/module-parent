@@ -1,6 +1,6 @@
 {
   "name": "module-parent",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Get one of the module&#39;s parents, cleaning the require cache",
   "main": "./index.js",
   "engines": {
