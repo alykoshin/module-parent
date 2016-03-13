@@ -3,11 +3,11 @@
 //var parentFile;
 //var parentDir;
 
-module.exports = function getParent(mod, _parentsToSkip) {
-  _parentsToSkip = _parentsToSkip || 0;
+module.exports = function parentModule(moduleToStart, numParentsToSkip) {
+  numParentsToSkip = numParentsToSkip || 0;
 
-  var callingModule = mod;
-  for (var i=0; i <= _parentsToSkip; i++) {
+  var callingModule = moduleToStart;
+  for (var i=0; i <= numParentsToSkip; i++) {
     ////////////////////////////////////////////////////////////////////////////////
     // Trick taken from https://github.com/aseemk/requireDir/blob/master/index.js //
     //                                                                            //
@@ -40,5 +40,5 @@ module.exports = function getParent(mod, _parentsToSkip) {
   //var parentModule = module.parent;
   //var parentFile   = parentModule.filename;
   //var parentDir    = path.dirname(parentFile);
-}
+};
 
